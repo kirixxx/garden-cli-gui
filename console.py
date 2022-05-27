@@ -2,7 +2,7 @@ import os
 import pickle
 import click
 from click_shell import shell
-from model.Gamemap import World
+from world.gamemap import World
 from interface import *
 
 @shell(prompt='> ', intro='Launching CLI application...')

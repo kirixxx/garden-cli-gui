@@ -1,14 +1,14 @@
 import pygame_widgets
 from pygame_widgets.button import Button
 
-from model.Gamemap import *
+from world.gamemap import *
 
 class Controller:
     def __init__(self):
         self.garden = None
     
     def get_weather(self):
-        return self.garden.weather.parameters["weather_is"]
+        return self.garden.weather.weather_par
     
     def get_list_of_plants(self):
         return self.garden.plants
@@ -16,9 +16,6 @@ class Controller:
     def plant_add(self, smth):
         self.garden.plants.append(smth)
         
-    def get_parametr(self, i, parametr):
-        return self.garden.plants[i].parameters[parametr]
-    
     def garden_init(self, world: World):
         self.garden = world
     

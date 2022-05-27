@@ -2,7 +2,7 @@ from gui import run_gui_interface
 import console
 import click
 from click_shell import shell
-from model.Gamemap import World
+from world.gamemap import World
 from interface import *
 from restore.restore_service import RestoreService
 @click.command()
@@ -11,11 +11,11 @@ from restore.restore_service import RestoreService
     default=False,
     help="Set this parameter as 'True' to upload previous session, otherwise 'False'."
 )
+
 @click.option(
     '--interface-type',
     default='CLI',
     help="Sets type of interface that application will use. Possible parameters are GUI and CLI.")
-
 
 def main(use_save, interface_type):
     '''Model of a garden plot'''
